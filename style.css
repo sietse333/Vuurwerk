@@ -6,16 +6,19 @@ section {
     display: flex;
     justify-content: center;
     perspective: 34em;
+    flex-direction: column;
+    align-items: center;
 }
 
 section div {
     width: 47em;
     height: 7em;
     background: gray;
-    align-self: end;
     border-radius: 4em 4em 0px 0px;
     box-shadow: 0.4em 0.4em 3em;
     transform: rotatex(50deg);
+
+    margin-top: auto;
 }
 
 section>div>ul {
@@ -41,14 +44,125 @@ span {
 
 }
 
+/* Explosie veld in het midden stuk */
+section > article > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+} 
+
+section > article > ul > li{
+    width: 2em;
+    height: 4em;
+
+} 
+
+section > article > ul > li:nth-child(2){
+    width: 2em;
+    height: 4em;
+    margin-right: 3em;
+} 
+
+
+
+
+/* Firework expotion template  */
+
+.pellets {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background: var(--ColorFirework);
+    border-radius: 50%;
+
+    transform: scale(0);
+    background-color:pink;
+    animation-duration: .5s;
+    animation-play-state: forwards;
+    animation-delay: .6s;
+  }  
+
+  .pink {
+    background-color:pink;
+  }  
+
+  .yellow {
+    background-color:yellow;
+  }  
+
+  .red {
+    background-color:red;
+  }  
+
+  /* Firework explotion expansion */
+  
+  .pellets:first-of-type {  
+    --upDown: 10em;
+    --leftRight: 10em;
+  }
+
+  .pellets:nth-of-type(2) {
+    --upDown: -10em;
+    --leftRight: 10em;
+  }
+
+  .pellets:nth-of-type(3) {
+    --upDown: -10em;
+    --leftRight: -10em;
+  }
+  .pellets:nth-of-type(4) {
+    --upDown: 10em;
+    --leftRight: -10em;
+  }
+  
+  .pellets:nth-of-type(5) {
+    --upDown: 0em;
+    --leftRight: 10em;
+  }
+  
+  .pellets:nth-of-type(6) {
+    --upDown: 10em;
+    --leftRight: 0em;
+  }
+  
+  .pellets:nth-of-type(7) {
+    --upDown: 0em;
+    --leftRight: -10em;
+  }
+  
+  .pellets:last-of-type {
+    --upDown: -10em;
+    --leftRight: 0em;
+  }
+
+
+  @keyframes explosion {
+    0% {
+      transform: translate(0em, 0em) scale(1);
+    }
+  
+    100% {
+      transform: translate(var(--leftRight), var(--upDown));
+      opacity: 0;
+    }
+  }
+
+
 /* rakketjes en animatie raket schieten */
+
+article{
+    width: 47em;
+    margin-top: 5em;
+}
 
 div>ul>li {
     background-color: red;
     width: 12em;
     height: 6em;
 }
-
 
 
 div>ul>li:first-child {
@@ -104,12 +218,24 @@ label {
     animation-name: rocket2;
 }
 
+#labelrocket2[type=checkbox]:checked ~ article .pink {
+    animation-name: explosion;
+}
+
 #labelrocket3[type=checkbox]:checked~div>ul>li:nth-child(3) {
     animation-name: rocket3;
 }
 
+#labelrocket3[type=checkbox]:checked ~ article .yellow {
+    animation-name: explosion;
+}
+
 #labelrocket4[type=checkbox]:checked~div>ul>li:nth-child(4) {
     animation-name: rocket4;
+}
+
+#labelrocket4[type=checkbox]:checked ~ article .red {
+    animation-name: explosion;
 }
 
 input {
@@ -196,7 +322,7 @@ input {
         transform: translateY(0);
     }
     99% {
-        transform: translateY(-17em) translateX(4em) scale(.6);
+        transform: translateY(-17em) translateX(7em) scale(.6);
         opacity: 100;
     }
     100% {
@@ -207,7 +333,8 @@ input {
 section>ul {
     flex-direction: row;
     display: flex;
-    position: absolute;
+    width: 100%;
+    justify-content: center;
 }
 
 /* Verschillende soorten bomen */
