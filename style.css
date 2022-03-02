@@ -77,7 +77,6 @@ section > article > ul > li:nth-child(2){
     width: 1em;
     background: var(--ColorFirework);
     border-radius: 50%;
-
     transform: scale(0);
     background-color:pink;
     animation-duration: .5s;
@@ -164,7 +163,7 @@ div>ul>li {
     height: 6em;
 }
 
-
+     
 div>ul>li:first-child {
     background-color: blue;
     animation-duration: 1.3s;
@@ -242,12 +241,6 @@ input {
     display: none;
 }
 
-/* animation-fill-mode: forwards; */
-/* animation: ease-out; */
-/* animation alternate voor trillen */
-/* animations koppelen met delays times iteration count */
-/* before en after gebruiken voor trillen en vuur tijdens vliegen */
-/* rotate en translatey voor curve */
 
 @keyframes crowd {
     0% {
