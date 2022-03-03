@@ -75,7 +75,6 @@ section > article > ul > li:nth-child(2){
     position: absolute;
     height: 1em;
     width: 1em;
-    background: var(--ColorFirework);
     border-radius: 50%;
     transform: scale(0);
     background-color:pink;
@@ -163,7 +162,6 @@ div>ul>li {
     height: 6em;
 }
 
-     
 div>ul>li:first-child {
     background-color: blue;
     animation-duration: 1.3s;
@@ -212,11 +210,15 @@ label {
 #labelrocket1[type=checkbox]:checked~span {
     animation-name: crowd;
 }
-
+/* rocket animation */
 #labelrocket2[type=checkbox]:checked~div>ul>li:nth-child(2){
     animation-name: rocket2;
 }
-
+/* explosion animation */
+#labelrocket2[type=checkbox]:checked #sound {
+    display: block;
+}
+/* sound effect */
 #labelrocket2[type=checkbox]:checked ~ article .pink {
     animation-name: explosion;
 }
@@ -240,6 +242,13 @@ label {
 input {
     display: none;
 }
+
+embed {
+    position: absolute;
+    top: -1000in;
+    left: -1000in;
+    display: none;
+  }
 
 
 @keyframes crowd {
@@ -353,4 +362,65 @@ section>ul>li:nth-of-type(3n) {
     margin-top: 1em;
     background-color: purple;
     clip-path: polygon(42% 97%, 42% 73%, 22% 78%, 42% 56%, 22% 62%, 42% 36%, 32% 38%, 46% 16%, 58% 38%, 49% 36%, 66% 60%, 48% 56%, 66% 76%, 48% 73%, 49% 97%);
+}
+
+.secret:hover  {
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: boomrechts;
+    animation-play-state: running;
+
+
+}
+
+/* boom animaties */
+@keyframes boomlinks {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8em) translateX(-5em);
+    }
+    50% {
+        transform: translateY(7em) translateX(-15em);
+    }
+    75% {
+        transform: translateY(2em) translateX(-25em);
+    }
+    98% {
+        transform: translateY(4em) translateX(-35em);
+    }
+    99% {
+        transform: translateY(4em) translateX(-95em);
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes boomrechts {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8em) translateX(5em);
+    }
+    50% {
+        transform: translateY(7em) translateX(15em);
+    }
+    75% {
+        transform: translateY(2em) translateX(25em);
+    }
+    98% {
+        transform: translateY(4em) translateX(35em);
+    }
+    99% {
+        transform: translateY(4em) translateX(95em);
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
 }
