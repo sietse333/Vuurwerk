@@ -12,9 +12,8 @@ Je staat voor een soort kijkdoos waar een tafel voor je ligt. Op die tafel ligge
 
 ![gang  pre](https://user-images.githubusercontent.com/43068118/156563353-86b8d403-2b1f-4854-ab5a-6d494e26727b.png)
 
-De layout is helemaal afgemaakt en ik heb werkende vuurpijlen met custom propertys. Ook werkt het om animaties te chainen en de defecte vuurpijl is af. Voor volgende week moet ik ik vuurpijlen individueel kunnen afvuren, geluid en reset knop.
+De layout is helemaal afgemaakt en ik heb werkende vuurpijlen met custom propertys. Ook werkt het om animaties te chainen en de defecte vuurpijl is af. 
 
 ## Applicatie in week 2
 
 ![gang 2](https://user-images.githubusercontent.com/43068118/156560592-ef75b07d-4ebc-43a4-8460-f028b3de0198.png)
-
