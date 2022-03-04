@@ -17,3 +17,5 @@ De layout is helemaal afgemaakt en ik heb werkende vuurpijlen met custom propert
 ## Applicatie in week 2
 
 ![gang 2](https://user-images.githubusercontent.com/43068118/156560592-ef75b07d-4ebc-43a4-8460-f028b3de0198.png)
+
+Sounds, Reset knop, Boom animaties
