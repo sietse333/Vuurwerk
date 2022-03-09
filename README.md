@@ -51,7 +51,10 @@ Ik heb uiteraard wel checkboxes gebruikt maar niet op deze manier. Verschillende
 
 ## Bronnen
 https://cssgradient.io/
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+
 https://www.w3schools.com/
+
 https://stackoverflow.com/
 
