@@ -49,3 +49,9 @@ Ik heb uiteraard wel checkboxes gebruikt maar niet op deze manier. Verschillende
 
 ![daa](https://user-images.githubusercontent.com/43068118/157465860-86d79c6d-2884-4e83-8e2d-7fc398b32025.png)
 
+## Bronnen
+https://cssgradient.io/
+https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+https://www.w3schools.com/
+https://stackoverflow.com/
+
