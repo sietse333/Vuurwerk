@@ -22,5 +22,6 @@ Week 2 was een slome week voor mij. Ik zat thuis met corona en had moeite om te 
 
 ## Applicatie in week 3
 
-![mooi](https://user-images.githubusercontent.com/43068118/157457575-59ff5c3e-1684-46bb-8b50-60207103b5de.png)
+![mooi](https://user-images.githubusercontent.com/43068118/157458164-b7703ca1-dea2-4262-971a-b50c169329bf.png)
+
 Deze woensdag weer op school gewerkt een enorme stappen gezet. Ik heb mijn hele project even een likje verf gegeven om het netjes eruit te laten zien. Ook heb ik de reset knop gefixt en de boom animaties gemaakt. Verder heb ik wolken toegevoegd die heen en weer bewegen. 
