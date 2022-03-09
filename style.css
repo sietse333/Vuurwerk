@@ -1,5 +1,5 @@
 section {
-    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 7%,rgba(53,53,53,1) 23%,rgba(0,0,0,1) 29%,rgba(0,0,0,1) 31%);
+    background: linear-gradient(to bottom, rgb(1, 74, 107) 0%,rgb(0, 129, 180) 7%,rgb(5, 179, 170) 23%,rgb(248, 91, 0) 29%,rgb(43, 129, 26) 31%);
     width: 100%;
     height: 32em;
     margin: auto;
@@ -17,7 +17,6 @@ section div {
     border-radius: 4em 4em 0px 0px;
     box-shadow: 0.4em 0.4em 3em;
     transform: rotatex(50deg);
-
     margin-top: auto;
 }
 
@@ -29,7 +28,7 @@ section>div>ul {
     padding: 0;
 }
 
-span {
+span:first-of-type {
     background-image: url(img/crowd.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -37,12 +36,13 @@ span {
     width: 13em;
     position: absolute;
     left: 9em;
-    top: 6em;
+    top: 11em;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
     animation-delay: .3s;
 
 }
+
 
 /* Explosie veld in het midden stuk */
 section > article > ul{
@@ -66,8 +66,27 @@ section > article > ul > li:nth-child(2){
     margin-right: 3em;
 } 
 
+/* resupply knop */
 
+a{
+    padding: 6em;
+    clip-path: polygon(31% 78%, 38% 82%, 47% 83%, 58% 83%, 66% 80%, 69% 73%, 70% 57%, 69% 41%, 67% 34%, 62% 32%, 66% 18%, 73% 19%, 70% 6%, 57% 16%, 62% 17%, 57% 32%, 50% 33%, 49% 16%, 54% 17%, 49% 6%, 43% 17%, 46% 16%, 47% 34%, 39% 35%, 34% 17%, 39% 17%, 27% 8%, 27% 20%, 30% 20%, 35% 34%, 28% 33%, 25% 40%, 25% 53%, 26% 63%);
+    background: linear-gradient(360deg, rgba(21,13,8,1) 5%, rgba(43,27,16,1) 8%, rgba(22,14,9,1) 11%, rgba(52,32,21,1) 15%, rgba(22,13,9,1) 19%, rgba(46,28,17,1) 23%, rgba(32,20,12,1) 27%, rgba(23,14,9,1) 30%, rgba(41,25,15,1) 34%, rgba(22,13,9,1) 37%, rgba(38,23,14,1) 42%, rgba(22,13,8,1) 46%, rgba(34,21,12,1) 52%, rgba(22,14,8,1) 57%, rgba(30,19,11,1) 69%, rgba(161,78,26,1) 63%, rgba(161,78,26,1) 80%, rgba(223,33,0,1) 82%, rgba(255,255,255,1) 86%, rgba(251,17,17,1) 88%, rgba(255,12,12,1) 92%, rgba(255,255,255,1) 94%, rgba(251,17,17,1) 96%);
+}
+span:nth-of-type(2):hover{
+    transform: scale(1.1);
+}
 
+span:nth-of-type(2):active{
+    transform: scale(.9);
+}
+
+span:nth-of-type(2){
+    filter: drop-shadow(9px 5px 4px rgba(7, 7, 7, 0.8));
+    align-self: end;
+    position: absolute;
+    bottom: 5em;
+}
 
 /* Firework expotion template  */
 
@@ -152,7 +171,6 @@ section > article > ul > li:nth-child(2){
 /* rakketjes en animatie raket schieten */
 article{
     width: 47em;
-    margin-top: 5em;
 }
 
 div>ul>li {
@@ -211,7 +229,7 @@ label {
     animation-name: rocket1;
 }
 
-#labelrocket1[type=checkbox]:checked~span {
+#labelrocket1[type=checkbox]:checked~span:first-of-type {
     animation-name: crowd;
 }
 /* rocket animation */
@@ -350,7 +368,31 @@ embed {
 	100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+/* Wolken */
 
+figure{
+    filter: 
+    drop-shadow(-91px 24px 1px rgba(255, 255, 255, .8))
+    drop-shadow(91px 24px 0px rgba(245, 245, 245, .9))
+    drop-shadow(315px -20px 1px rgba(245, 245, 245, .8))
+    drop-shadow(-615px -20px 1px rgba(245, 245, 245, .9))
+    drop-shadow(515px -20px 0px rgba(245, 245, 245, .8))
+    ;
+}
+
+figure div{
+    width: 5em;
+    height: 0; 
+    clip-path: polygon(17% 60%, 13% 67%, 18% 76%, 27% 78%, 36% 78%, 41% 74%, 50% 73%, 59% 71%, 68% 75%, 81% 75%, 88% 68%, 90% 55%, 72% 47%, 65% 49%, 57% 51%, 52% 42%, 42% 43%, 35% 45%, 32% 52%, 25% 53%, 19% 56%);
+    padding: 2em;
+    background-color: white;
+    animation-duration: 40s;
+    animation-name: wolkjes;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* bomen */
 section>ul {
     flex-direction: row;
     display: flex;
@@ -359,10 +401,6 @@ section>ul {
     
 }
 
-/* section>ul:hover section>ul>li {
-    transform: scale(2);
-
-} */
 
 /* Verschillende soorten bomen */
 section>ul>li {
@@ -371,8 +409,7 @@ section>ul>li {
     background: linear-gradient(to bottom, rgb(122, 156, 58) 41%,rgba(46,99,56,1) 79%,rgba(76,36,0,1) 82%,rgba(76,36,0,1) 100%);
     clip-path: polygon(42% 97%, 42% 73%, 22% 78%, 42% 56%, 22% 62%, 42% 36%, 32% 38%, 46% 16%, 58% 38%, 49% 36%, 66% 60%, 48% 56%, 66% 76%, 48% 73%, 49% 97%);
 }
-
-
+ 
 section>ul>li:nth-of-type(even) {
     width: 3em;
     height: 5em;
@@ -389,35 +426,48 @@ section>ul>li:nth-of-type(3n) {
     clip-path: polygon(42% 97%, 42% 73%, 22% 78%, 42% 56%, 22% 62%, 42% 36%, 32% 38%, 46% 16%, 58% 38%, 49% 36%, 66% 60%, 48% 56%, 66% 76%, 48% 73%, 49% 97%);
 }
 
-.secret:hover  {
+section>ul:hover li:nth-of-type(3n){
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: boomonder;
+}
+
+section>ul:hover li:nth-of-type(even){
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: boomlinks;
+}
+
+section>ul:hover li{
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-name: boomrechts;
-    animation-play-state: running;
-
-
 }
+
+
 
 /* boom animaties */
 @keyframes boomlinks {
     0% {
         transform: translateY(0);
     }
-    50% {
-        transform: translateY(8em) translateX(-5em);
+    25% {
+        transform: translateY(3em) translateX(-5em);
     }
     50% {
-        transform: translateY(7em) translateX(-15em);
+        transform: translateY(-2em) translateX(-25em);
     }
     75% {
-        transform: translateY(2em) translateX(-25em);
+        transform: translateY(1em) translateX(-35em);
     }
     98% {
-        transform: translateY(4em) translateX(-35em);
+        transform: translateY(-3em) translateX(-55em);
     }
     99% {
-        transform: translateY(4em) translateX(-95em);
+        transform: translateY(-3em) translateX(-95em);
         opacity: 100;
     }
     100%{
@@ -429,17 +479,17 @@ section>ul>li:nth-of-type(3n) {
     0% {
         transform: translateY(0);
     }
-    50% {
-        transform: translateY(8em) translateX(5em);
+    25% {
+        transform: translateY(6em) translateX(5em);
     }
     50% {
-        transform: translateY(7em) translateX(15em);
-    }
-    75% {
         transform: translateY(2em) translateX(25em);
     }
-    98% {
+    75% {
         transform: translateY(4em) translateX(35em);
+    }
+    98% {
+        transform: translateY(1em) translateX(55em);
     }
     99% {
         transform: translateY(4em) translateX(95em);
@@ -447,5 +497,50 @@ section>ul>li:nth-of-type(3n) {
     }
     100%{
         opacity: 0;
+    }
+}
+
+@keyframes boomonder {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(4em) translateX(5em);
+    }
+    50% {
+        transform: translateY(8em) translateX(-5em);
+    }
+    75% {
+        transform: translateY(12em) translateX(5em);
+    }
+    98% {
+        transform: translateY(16em) translateX(-5em);
+    }
+    99% {
+        transform: translateY(24em) translateX(5em);
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@keyframes wolkjes {
+    0% {
+        transform: translatex(0);
+    }
+
+    25%{
+        transform: translatex(10em);
+    }
+    50%{
+        transform: translatex(0em);
+    }
+    75%{
+        transform: translatex(-10em);
+    }
+    100%{
+        transform: translatex(0em);
     }
 }
