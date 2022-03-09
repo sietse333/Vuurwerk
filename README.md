@@ -19,3 +19,7 @@ De layout is helemaal afgemaakt en ik heb werkende vuurpijlen met custom propert
 ![gang 2](https://user-images.githubusercontent.com/43068118/156560592-ef75b07d-4ebc-43a4-8460-f028b3de0198.png)
 
 Sounds, Reset knop, Boom animaties
+
+Week 2 was een slome week voor mij. Ik zat thuis met corona en had moeite om te focussen op mijn werk. Ik zag wel direct waarom het een must is om lange uren op school te maken. Ik was begonnen aan sounds toevoegen maar dit lukte mij niet helemaal. Ik had een embed met een sound op display:none gezet en het moment dat een animatie afspeelde werd het display:block. Dit werkte helaas niet en speelde alleen af al laade ik opnieuw mijn pagina. Ook was ik bezig aan een reset knop om mijn checkboxes te resetten maar dit is volgens mijn research niet te doen zonder javascript. Laatste ben ik bezig geweest aan de bomen waar ik ver mee ben gekomen ik moet alleen nog even zorgen dat ze apart van elkaar rennen.
+
+## Applicatie in week 3
